@@ -1,0 +1,13 @@
+{
+  "name": "github-trending-api-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:waningflow/github-trending-api-node.git",
+  "author": "waningflow <jack1995woods@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "lodash": "^4.17.20",
+    "node-fetch": "^2.6.1"
+  }
+}
