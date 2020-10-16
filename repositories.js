@@ -24,10 +24,10 @@ exports.handler = async (req, resp, context) => {
   let data = cache.get(cacheKey);
   if (!data) {
     data = await fetchRepositories({ language, since, spokenLanguage });
-    cache.set(cacheKey, data, 15 * 60 * 1000);
+    cache.set(cacheKey, data, 3600 * 1000);
   }
   resp.setHeader('Content-Type', 'application/json');
-  resp.setHeader('Cache-Control', 'max-age=900');
+  resp.setHeader('Cache-Control', 'max-age=3600');
   resp.setHeader('Access-Control-Allow-Origin', '*');
   resp.send(JSON.stringify(data));
 };
